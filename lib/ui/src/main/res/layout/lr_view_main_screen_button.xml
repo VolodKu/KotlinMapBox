@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@drawable/lr_view_main_screen_button_background"
+    tools:layout_height="48dp"
+    tools:layout_width="48dp"
+    tools:parentTag="FrameLayout"
+    >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:layout_margin="12dp"
+        android:scaleType="fitCenter"
+        android:tint="@color/black25Alpha"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_my_location_black_24dp"
+        />
+
+</merge>

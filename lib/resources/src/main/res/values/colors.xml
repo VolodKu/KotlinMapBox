@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white75Alpha">#40ffffff</color>
+    <color name="white50Alpha">#80ffffff</color>
+    <color name="white25Alpha">#C0ffffff</color>
+    <color name="white12Alpha">#E0ffffff</color>
+    <color name="black75Alpha">#40000000</color>
+    <color name="black50Alpha">#80000000</color>
+    <color name="black25Alpha">#C0000000</color>
+
+    <color name="greypannel">#C0EEEFF1</color>
+
+    <color name="lr_txt_street_name">#2196F3</color>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.liveroads.ui"
+    >
+
+    <application>
+
+        <activity
+            android:name=".ToolsActivity"
+            android:enabled="false"
+            android:theme="@style/LrAppTheme.NoActionBar"
+            />
+
+    </application>
+
+</manifest>

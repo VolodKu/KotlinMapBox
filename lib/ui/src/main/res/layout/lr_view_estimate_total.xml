@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:background="@color/lr_estimate_bg"
+  tools:layout_width="match_parent"
+  tools:layout_height="@dimen/lr_estimate_panel_height"
+  tools:parentTag="android.support.constraint.ConstraintLayout"
+  tools:ignore="RtlHardcoded"
+  >
+
+  <TextView
+    android:id="@+id/estimate_time"
+    tools:text="4h 18m"
+    android:drawableLeft="@drawable/lr_ic_estimate_time"
+    android:textAppearance="@style/Estimation.TextAppearance"
+    style="@style/Estimation.Style"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:drawablePadding="4dp"
+    app:layout_constraintRight_toLeftOf="@+id/estimate_distance"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    android:layout_marginRight="8dp"/>
+
+  <TextView
+    android:id="@+id/estimate_distance"
+    tools:text="313 km"
+    android:textAppearance="@style/Estimation.TextAppearance"
+    style="@style/Estimation.Style"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawableLeft="@drawable/lr_ic_estimate_distance"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toRightOf="@+id/estimate_time"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginLeft="8dp"/>
+
+</merge>

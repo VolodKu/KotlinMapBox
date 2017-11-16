@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lr_my_location_margin_bottom_large_map">48dp</dimen>
+    <dimen name="lr_my_location_margin_bottom_pip_map">20dp</dimen>
+    
+    <dimen name="lr_estimate_panel_height">56dp</dimen>
+
+    <dimen name="lr_speed_limit_sign_border">5dp</dimen>
+    <dimen name="lr_speed_limit_sign_digits_text">24sp</dimen>
+    <dimen name="lr_speed_limit_sign_dimension_text">8sp</dimen>
+    <dimen name="lr_margin_normal">10dp</dimen>
+    <dimen name="lr_padding_small">5dp</dimen>
+    <dimen name="lr_padding_normal">10dp</dimen>
+    <dimen name="lr_padding_large">15dp</dimen>
+
+</resources>

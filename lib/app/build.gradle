@@ -1,0 +1,23 @@
+apply plugin: "com.android.library"
+apply from: rootProject.file("common.gradle")
+
+android {
+    publishNonDefault true
+}
+
+dependencies {
+    releaseCompile project(path: ':lib:common', configuration: 'release')
+    debugCompile project(path: ':lib:common', configuration: 'debug')
+    releaseCompile project(path: ':lib:location', configuration: 'release')
+    debugCompile project(path: ':lib:location', configuration: 'debug')
+    releaseCompile project(path: ':lib:login', configuration: 'release')
+    debugCompile project(path: ':lib:login', configuration: 'debug')
+    releaseCompile project(path: ':lib:mapbox', configuration: 'release')
+    debugCompile project(path: ':lib:mapbox', configuration: 'debug')
+    releaseCompile project(path: ':lib:mapzen', configuration: 'release')
+    debugCompile project(path: ':lib:mapzen', configuration: 'debug')
+    releaseCompile project(path: ':lib:ui', configuration: 'release')
+    debugCompile project(path: ':lib:ui', configuration: 'debug')
+    releaseCompile project(path: ':lib:db', configuration: 'release')
+    debugCompile project(path: ':lib:db', configuration: 'debug')
+}

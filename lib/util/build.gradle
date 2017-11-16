@@ -1,0 +1,18 @@
+apply plugin: "com.android.library"
+apply from: rootProject.file("common.gradle")
+
+android {
+    publishNonDefault true
+    defaultConfig {
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+}
+
+dependencies {
+    compile "com.android.support:support-annotations:${versions.appCompat}"
+    compile "com.android.support:support-fragment:${versions.appCompat}"
+
+    testCompile "junit:junit:${versions.junit}"
+    testCompile "org.mockito:mockito-core:${versions.mockito}"
+    testCompile "org.jetbrains.kotlin:kotlin-test-junit:${versions.kotlin}"
+}

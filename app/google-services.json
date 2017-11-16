@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "806041298847",
+    "firebase_url": "https://live-roads-7dd01.firebaseio.com",
+    "project_id": "live-roads-7dd01",
+    "storage_bucket": "live-roads-7dd01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806041298847:android:4a0a691e22219732",
+        "android_client_info": {
+          "package_name": "com.liveroads"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806041298847-5ngj8p8lahhnnnr65ktroi8ckou8fehq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.liveroads",
+            "certificate_hash": "3b535c7756f3686237db8731386b8b28b04bac50"
+          }
+        },
+        {
+          "client_id": "806041298847-qbc19dtevbn50h8edkks6ll4gkof26sa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACdP9IjdtfhxHy0eP1nf6hkf1H72L7Zt4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806041298847-qbc19dtevbn50h8edkks6ll4gkof26sa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

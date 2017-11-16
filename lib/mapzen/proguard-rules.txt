@@ -1,0 +1,13 @@
+# For Moshi, do not shrink or rename field names in the request/response bodies
+-keepclassmembers class com.liveroads.mapzen.body.** {
+    <fields>;
+}
+
+# For Retrofit, as documented
+-dontnote retrofit2.Platform
+-dontwarn retrofit2.Platform$Java8
+-keepattributes Signature
+-keepattributes Exceptions
+
+# For okio, as documented
+-dontwarn okio.**

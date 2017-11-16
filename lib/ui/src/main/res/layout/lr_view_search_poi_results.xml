@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_height="match_parent"
+    tools:layout_width="match_parent"
+    tools:parentTag="FrameLayout"
+    >
+
+    <ProgressBar
+        android:id="@+id/lr_view_search_results_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:isScrollContainer="true"
+        />
+
+    <TextView
+        android:id="@+id/lr_view_search_results_none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:isScrollContainer="true"
+        android:text="@string/lr_msg_no_search_results"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lr_view_search_results_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <ScrollView
+        android:id="@+id/lr_view_search_results_error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/lr_view_search_results_error_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/lr_view_search_results_error_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="@string/lr_err_search_failed"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                />
+
+
+            <TextView
+                android:id="@+id/lr_view_search_results_error_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                tools:text="IOException: something went wrong with network communication"
+                />
+
+            <Button
+                android:id="@+id/lr_view_search_results_error_try_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/lr_btn_search_try_again"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</merge>

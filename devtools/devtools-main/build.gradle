@@ -1,0 +1,21 @@
+apply plugin: "com.android.library"
+apply from: rootProject.file("common.gradle")
+
+android {
+    publishNonDefault true
+}
+
+dependencies {
+    releaseCompile project(path: ':devtools:devtools-client', configuration: 'release')
+    debugCompile project(path: ':devtools:devtools-client', configuration: 'debug')
+    releaseCompile project(path: ':devtools:devtools-ui', configuration: 'release')
+    debugCompile project(path: ':devtools:devtools-ui', configuration: 'debug')
+    releaseCompile project(path: ':lib:common', configuration: 'release')
+    debugCompile project(path: ':lib:common', configuration: 'debug')
+    releaseCompile project(path: ':lib:ui', configuration: 'release')
+    debugCompile project(path: ':lib:ui', configuration: 'debug')
+
+    compile "com.android.support:appcompat-v7:${versions.appCompat}"
+    compile "com.android.support:support-fragment:${versions.appCompat}"
+    compile "com.android.support:preference-v14:${versions.appCompat}"
+}

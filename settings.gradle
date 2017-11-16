@@ -1,0 +1,21 @@
+include ":app"
+
+include ":lib:app"
+include ":lib:common"
+include ":lib:location"
+include ":lib:login"
+include ":lib:mapbox"
+include ":lib:mapzen"
+include ":lib:resources"
+include ":lib:secrets"
+include ":lib:ui"
+include ":lib:util"
+include ":lib:blackbox"
+include ':lib:db'
+
+include ":devtools:devtools-app"
+include ":devtools:devtools-api"
+include ":devtools:devtools-client"
+include ":devtools:devtools-main"
+include ":devtools:devtools-resources"
+include ":devtools:devtools-ui"

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty"/>
+    <string name="lr_app_name">Live Roads</string>
+    <string name="lr_shared_uid_label">Live Roads</string>
+    <string name="lr_hamburger_menu_description">Toggle side drawer</string>
+    <string name="lr_btn_search_description">Search</string>
+    <string name="lr_hint_search_text">Search</string>
+    <string name="lr_msg_logging_in">Logging in…</string>
+    <string name="lr_msg_creating_account">Creating account…</string>
+    <string name="lr_error_network_error">An error occurred communicating with the server</string>
+    <string name="lr_error_login">Login failed</string>
+    <string name="lr_error_login_unknown_user">Unknown user</string>
+    <string name="lr_error_login_invalid_password">Invalid password</string>
+    <string name="lr_error_login_unknown">Unknown error occurred during login</string>
+    <string name="lr_error_create_account">Creating account failed</string>
+    <string name="lr_error_create_account_weak_password">Password does not meet the security requirements</string>
+    <string name="lr_error_create_account_malformed_email">Invalid email address</string>
+    <string name="lr_error_create_account_already_exists">Account already exists</string>
+    <string name="lr_error_create_account_unknown">Unknown error occurred creating account</string>
+    <string name="lr_menu_logout">Logout</string>
+    <string name="lr_menu_settings">Settings</string>
+    <string name="lr_menu_devtools">DevTools</string>
+    <string name="lr_menu_about">About</string>
+    <string name="lr_msg_goto_my_location">Go to my location</string>
+    <string name="lr_msg_no_search_results">No search results found</string>
+    <string name="lr_err_search_failed">Search failed</string>
+    <string name="lr_btn_search_try_again">Try again</string>
+    <string name="lr_debug_map_latitude_amount">Lat: %1$.5f</string>
+    <string name="lr_debug_map_longitude_amount">Lon: %1$.5f</string>
+    <string name="lr_debug_map_altitude_amount">Alt: %1$.3f</string>
+    <string name="lr_debug_map_bearing_amount">Bear: %1$.3f</string>
+    <string name="lr_debug_map_tilt_amount">Tlt: %1$.3f</string>
+    <string name="lr_debug_map_zoom_amount">Zm: %1$.3f</string>
+
+    <plurals name="meters">
+        <item quantity="zero">meters</item>
+        <item quantity="one">meter</item>
+        <item quantity="few">meters</item>
+        <item quantity="two">meters</item>
+        <item quantity="many">meters</item>
+        <item quantity="other">meters</item>
+    </plurals>
+
+    <plurals name="kilometers">
+        <item quantity="zero">kilometers</item>
+        <item quantity="one">kilometer</item>
+        <item quantity="few">kilometers</item>
+        <item quantity="two">kilometers</item>
+        <item quantity="many">kilometers</item>
+        <item quantity="other">kilometers</item>
+    </plurals>
+
+    <plurals name="seconds">
+        <item quantity="zero">seconds</item>
+        <item quantity="one">second</item>
+        <item quantity="few">seconds</item>
+        <item quantity="two">seconds</item>
+        <item quantity="many">seconds</item>
+        <item quantity="other">seconds</item>
+    </plurals>
+
+</resources>

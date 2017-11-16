@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.liveroads.ui.PipView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lr_fragment_main_maps_pip_view"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:lr_pip_height_pct="0.5"
+    app:lr_pip_margin="0dp"
+    app:lr_pip_width_pct="0.5"
+    app:lr_pip_estimate_height="@dimen/lr_estimate_panel_height"
+    >
+
+    <!-- NOTE: use match_parent instead of 0dp in layout_width and layout_height in the fragment
+         tags below even though it is irrelevant when they are contained in a SplitSliderView
+         because not doing so causes the MapView to render nothing, probably because it looks at
+         its own LayoutParams to determine if it will be drawn -->
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <fragment
+                android:id="@+id/lr_fragment_main_maps_large_map"
+                android:name="com.liveroads.app.LargeMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout="@layout/lr_fragment_large_map"/>
+        <com.liveroads.ui.EstimatePanelView
+                android:id="@+id/large_map_estimation_panel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lr_estimate_panel_height"
+                android:background="@color/lr_estimate_large_map_bg"
+                android:layout_gravity="bottom"
+                android:visibility="visible"
+                tools:visibility="visible"
+                />
+    </FrameLayout>
+
+    <!-- NOTE: the fragment is placed inside of a FrameLayout with a black background so that the
+         drop shadow will be rendered by the containing layout -->
+
+    <android.support.constraint.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lr_estimate_pip_map_bg"
+        android:elevation="8dp"
+        >
+
+        <fragment
+            android:id="@+id/lr_fragment_main_maps_pip_map"
+            android:name="com.liveroads.app.PipMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/pip_map_estimation_panel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout="@layout/lr_fragment_pip_map"
+            />
+
+        <com.liveroads.ui.EstimatePanelView
+                android:id="@+id/pip_map_estimation_panel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/lr_estimate_panel_height"
+                android:background="@color/lr_estimate_pip_map_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:visibility="visible"
+                tools:visibility="visible"
+                />
+
+    </android.support.constraint.ConstraintLayout>
+
+</com.liveroads.ui.PipView>

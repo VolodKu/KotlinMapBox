@@ -1,0 +1,52 @@
+apply plugin: "com.android.application"
+apply from: rootProject.file("common.gradle")
+
+android {
+    defaultConfig {
+        applicationId "com.liveroads"
+        versionName "1.0.0-dev"
+        versionCode 1
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            multiDexEnabled true
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt")
+            proguardFiles file("proguard-rules.txt")
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile rootProject.file("debug.keystore")
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+    packagingOptions {
+        // temporary workaround for android-kutils-support-fragment including this file in its META-INF
+        exclude "META-INF/build_release.kotlin_module"
+    }
+}
+
+dependencies {
+    releaseCompile project(path: ':lib:app', configuration: 'release')
+    debugCompile project(path: ':lib:app', configuration: 'debug')
+    releaseCompile project(path: ':devtools:devtools-main', configuration: 'release')
+    debugCompile project(path: ':devtools:devtools-main', configuration: 'debug')
+
+    // required so that Firebase initializes successfully
+    compile "com.google.firebase:firebase-core:${versions.firebase}"
+}
+
+apply plugin: "com.google.gms.google-services"

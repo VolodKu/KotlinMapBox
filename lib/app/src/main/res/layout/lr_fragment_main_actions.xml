@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lr_fragment_main_actions_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.liveroads.ui.MainScreenButtonView
+        android:id="@+id/lr_fragment_main_actions_hamburger_button"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_margin="11dp"
+        android:background="@drawable/lr_view_main_screen_button_background"
+        android:elevation="12dp"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lr_contentDescription="@string/lr_hamburger_menu_description"
+        app:lr_src="@android:drawable/sym_def_app_icon"
+        />
+
+    <com.liveroads.ui.MainScreenButtonView
+        android:id="@+id/lr_fragment_main_actions_search_button"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_margin="11dp"
+        android:background="@drawable/lr_view_main_screen_button_background"
+        android:elevation="12dp"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lr_contentDescription="@string/lr_btn_search_description"
+        app:lr_src="@drawable/ic_search_black_24dp"
+        />
+
+    <com.liveroads.ui.AnimatedButton
+        android:id="@+id/lr_fragment_main_actions_liveroads_button"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:alpha="0.5"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/lr_fragment_main_actions_go_to_my_location_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:lr_click_alpha="1.0"
+        app:lr_growth_factor="1.5"
+        app:lr_src="@drawable/lr_logo"
+        />
+
+    <com.liveroads.ui.MainScreenButtonView
+            android:id="@+id/lr_fragment_main_actions_go_to_my_location_button"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_margin="11dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/lr_view_main_screen_button_background"
+            android:elevation="12dp"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toTopOf="@+id/lr_estimation_panel_space_holder"
+            app:layout_constraintRight_toRightOf="parent"
+            app:lr_contentDescription="@string/lr_msg_goto_my_location"
+            app:lr_src="@drawable/ic_my_location_black_24dp"/>
+
+    <View
+            android:id="@+id/lr_estimation_panel_space_holder"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/lr_estimate_panel_height"/>
+
+
+</android.support.constraint.ConstraintLayout>

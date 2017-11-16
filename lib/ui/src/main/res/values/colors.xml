@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+  <color name="lr_estimate_large_map_bg">#9a3c9669</color>
+  <color name="lr_estimate_pip_map_bg">#3c9669</color>
+  <color name="lr_estimate_text">#ffffffff</color>
+
+</resources>

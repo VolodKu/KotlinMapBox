@@ -1,0 +1,20 @@
+apply plugin: "com.android.library"
+apply from: rootProject.file("common.gradle")
+
+android {
+    publishNonDefault true
+}
+
+dependencies {
+    releaseCompile project(path: ':devtools:devtools-resources', configuration: 'release')
+    debugCompile project(path: ':devtools:devtools-resources', configuration: 'debug')
+    releaseCompile project(path: ':lib:resources', configuration: 'release')
+    debugCompile project(path: ':lib:resources', configuration: 'debug')
+    releaseCompile project(path: ':lib:ui', configuration: 'release')
+    debugCompile project(path: ':lib:ui', configuration: 'debug')
+    releaseCompile project(path: ':lib:util', configuration: 'release')
+    debugCompile project(path: ':lib:util', configuration: 'debug')
+
+    compile "com.android.support:appcompat-v7:${versions.appCompat}"
+    compile "com.android.support.constraint:constraint-layout:${versions.constraintLayout}"
+}

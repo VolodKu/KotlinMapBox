@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:background="@color/lr_estimate_large_map_bg"
+  android:layout_width="match_parent"
+  android:layout_height="@dimen/lr_estimate_panel_height"
+  tools:parentTag="FrameLayout"
+  >
+
+  <com.liveroads.ui.EstimateTotalView
+    android:id="@+id/estimate_total"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+  <com.liveroads.ui.EstimateNextTurnView
+    android:id="@+id/estimate_next_turn"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+</merge>

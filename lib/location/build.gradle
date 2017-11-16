@@ -1,0 +1,23 @@
+apply plugin: "com.android.library"
+apply from: rootProject.file("common.gradle")
+
+android {
+    publishNonDefault true
+    defaultConfig {
+        consumerProguardFiles "proguard-rules.txt"
+    }
+}
+
+dependencies {
+    releaseCompile project(path: ':lib:blackbox', configuration: 'release')
+    debugCompile project(path: ':lib:blackbox', configuration: 'debug')
+    releaseCompile project(path: ':lib:common', configuration: 'release')
+    debugCompile project(path: ':lib:common', configuration: 'debug')
+
+    compile "com.google.android.gms:play-services-location:${versions.gms}"
+
+    compile "com.squareup.okhttp3:okhttp:${versions.okhttp}"
+    compile "com.squareup.retrofit2:retrofit:${versions.retrofit}"
+    compile "com.squareup.retrofit2:converter-moshi:${versions.retrofit}"
+    compile "com.squareup.moshi:moshi:${versions.moshi}"
+}

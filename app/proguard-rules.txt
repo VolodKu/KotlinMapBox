@@ -1,0 +1,2 @@
+-dontwarn okio.DeflaterSink
+-dontwarn okio.Okio

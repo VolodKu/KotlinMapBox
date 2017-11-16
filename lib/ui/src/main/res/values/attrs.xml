@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LiveRoadsUI">
+        <attr name="lr_click_width" format="dimension|reference"/>
+        <attr name="lr_click_height" format="dimension|reference"/>
+        <attr name="lr_click_alpha" format="float|reference"/>
+        <attr name="lr_click_slop" format="dimension|reference"/>
+        <attr name="lr_pip_margin" format="dimension|reference"/>
+        <attr name="lr_pip_width_pct" format="float|reference"/>
+        <attr name="lr_pip_height_pct" format="float|reference"/>
+        <attr name="lr_pip_estimate_height" format="dimension|reference"/>
+        <attr name="lr_growth_factor" format="float|reference"/>
+        <attr name="lr_contentDescription" format="string|reference"/>
+        <attr name="lr_src" format="reference"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,18 @@
+apply plugin: "com.android.library"
+apply from: rootProject.file("common.gradle")
+
+android {
+    publishNonDefault true
+}
+
+dependencies {
+    releaseCompile project(path: ':lib:secrets', configuration: 'release')
+    debugCompile project(path: ':lib:secrets', configuration: 'debug')
+
+    compile(name: "MapboxGLAndroidSDK-release", ext:"aar") {
+        transitive = true
+    }
+    compile "com.mapbox.mapboxsdk:mapbox-android-services:2.2.2"
+    compile 'com.mapbox.mapboxsdk:mapbox-android-navigation:0.4.0'
+    compile "com.android.support:appcompat-v7:${versions.appCompat}"
+}

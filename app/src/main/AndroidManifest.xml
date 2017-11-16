@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.liveroads"
+    android:sharedUserId="com.liveroads"
+    android:sharedUserLabel="@string/lr_shared_uid_label"
+    >
+
+    <permission-tree android:name="com.liveroads.permission" />
+
+    <permission
+        android:name="com.liveroads.permission.INTERNAL"
+        android:protectionLevel="signature"
+        />
+
+    <uses-permission android:name="com.liveroads.permission.INTERNAL" />
+
+    <application
+        android:name=".LiveRoadsApplication"
+        android:icon="@mipmap/lr_ic_launcher"
+        android:allowBackup="true"
+        android:label="@string/lr_app_name"
+        android:theme="@style/LrAppTheme.NoActionBar"
+        />
+
+</manifest>

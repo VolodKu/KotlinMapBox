@@ -1,0 +1,46 @@
+buildscript {
+    ext.versions = [
+        androidGradlePlugin: "2.3.3",
+        kotlin: "1.1.4-3",
+        appCompat: "26.0.1",
+        constraintLayout: "1.0.2",
+        firebase: "11.0.4",
+        junit: "4.12",
+        mockito: "2.7.22",
+        gms: "11.0.4",
+        okhttp: "3.8.1",
+        retrofit: "2.3.0",
+        moshi: "1.5.0",
+    ]
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:${versions.androidGradlePlugin}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+        classpath "com.google.gms:google-services:3.0.0"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+        maven {
+            url "http://oss.sonatype.org/content/repositories/snapshots/"
+        }
+        flatDir {
+            dirs rootProject.file("lib/mapbox/libs")
+            dirs rootProject.file("lib/blackbox/libs")
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "4.0"
+    distributionType = Wrapper.DistributionType.ALL
+}

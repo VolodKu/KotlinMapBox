@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="Estimation"/>
+  <style name="Estimation.TextAppearance" parent="TextAppearance.AppCompat.Medium">
+    <item name="android:textColor">@color/lr_estimate_text</item>
+    <item name="android:textSize">18sp</item>
+  </style>
+
+  <style name="Estimation.Style">
+    <item name="android:gravity">center</item>
+  </style>
+
+</resources>

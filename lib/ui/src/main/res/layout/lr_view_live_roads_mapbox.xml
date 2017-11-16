@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/black25Alpha"
+    tools:layout_height="match_parent"
+    tools:layout_width="match_parent"
+    tools:parentTag="android.support.constraint.ConstraintLayout"
+    >
+
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/street_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/lr_rounded_rect"
+        android:backgroundTint="@color/white25Alpha"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="8dp"
+        android:textColor="@color/lr_txt_street_name"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/estimation_panel_place_holder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="Yonge St."
+        />
+
+
+    <com.liveroads.ui.SpeedLimitSignView
+            android:id="@+id/speed_limit_sign"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/estimation_panel_place_holder"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="16dp"/>
+
+    <View
+        android:id="@+id/placeholder_above_street_name"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="48dp"
+        android:background="@android:color/holo_red_dark"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/street_name"
+        app:layout_constraintLeft_toLeftOf="@+id/street_name"
+        app:layout_constraintRight_toRightOf="@+id/street_name"
+        />
+
+    <View
+        android:id="@+id/placeholder_center"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_red_dark"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/debug_info_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lr_rounded_rect"
+        android:backgroundTint="@color/white25Alpha"
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/debug_latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:text="Lat: 12.123123"
+            />
+
+        <TextView
+            android:id="@+id/debug_longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:text="Lon: 12.123123"
+            />
+
+        <TextView
+            android:id="@+id/debug_altitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:text="Alt: 12.123123"
+            />
+
+        <TextView
+            android:id="@+id/debug_bearing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:text="Bear: 12.123123"
+            />
+
+        <TextView
+            android:id="@+id/debug_tilt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:text="Tilt: 12.123123"
+            />
+
+        <TextView
+            android:id="@+id/debug_zoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:text="Zoom: 45.453423"
+            />
+
+    </LinearLayout>
+
+    <View
+            android:id="@+id/estimation_panel_place_holder"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/lr_estimate_panel_height"
+            android:layout_marginBottom="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:visibility="visible"
+            />
+
+</merge>

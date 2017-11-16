@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LiveRoadsDevToolsUI">
+        <attr name="lr_devtools_title" format="string|reference"/>
+        <attr name="lr_devtools_subtitle" format="string|reference"/>
+        <attr name="lr_devtools_icon" format="reference"/>
+        <attr name="lr_devtools_icon_alpha" format="float|reference"/>
+    </declare-styleable>
+</resources>

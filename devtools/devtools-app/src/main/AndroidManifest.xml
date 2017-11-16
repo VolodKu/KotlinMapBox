@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.liveroads.devtools"
+    android:sharedUserId="com.liveroads"
+    android:sharedUserLabel="@string/lr_shared_uid_label"
+    >
+
+    <uses-permission android:name="com.liveroads.permission.INTERNAL"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/lr_devtools_ic_launcher"
+        android:label="@string/lr_devtools_app_name"
+        >
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@android:style/Theme.NoDisplay"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.liveroads.devtools.DevToolsService"
+            android:exported="true"
+            android:permission="com.liveroads.permission.INTERNAL"
+            android:process="com.liveroads"
+            />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,36 @@
+apply plugin: "com.android.application"
+apply from: rootProject.file("common.gradle")
+
+android {
+    defaultConfig {
+        applicationId "com.liveroads.devtools"
+        versionName "1.0.0"
+        versionCode 1
+    }
+    signingConfigs {
+        debug {
+            storeFile rootProject.file("debug.keystore")
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+    packagingOptions {
+        // temporary workaround for android-kutils-support-fragment including this file in its META-INF
+        exclude "META-INF/build_release.kotlin_module"
+    }
+}
+
+dependencies {
+    releaseCompile project(path: ':lib:resources', configuration: 'release')
+    debugCompile project(path: ':lib:resources', configuration: 'debug')
+    releaseCompile project(path: ':devtools:devtools-api', configuration: 'release')
+    debugCompile project(path: ':devtools:devtools-api', configuration: 'debug')
+    releaseCompile project(path: ':devtools:devtools-resources', configuration: 'release')
+    debugCompile project(path: ':devtools:devtools-resources', configuration: 'debug')
+}

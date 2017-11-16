@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="NavigationMapRoute">
+        <item name="routeColor">@color/mapbox_navigation_route_layer_blue</item>
+    </style>
+</resources>

@@ -1,0 +1,13 @@
+apply plugin: "com.android.library"
+apply from: rootProject.file("common.gradle")
+
+android {
+    publishNonDefault true
+}
+
+dependencies {
+    releaseCompile project(path: ':devtools:devtools-api', configuration: 'release')
+    debugCompile project(path: ':devtools:devtools-api', configuration: 'debug')
+    releaseCompile project(path: ':lib:util', configuration: 'release')
+    debugCompile project(path: ':lib:util', configuration: 'debug')
+}

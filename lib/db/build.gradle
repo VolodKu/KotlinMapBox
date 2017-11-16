@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+apply from: rootProject.file("common.gradle")
+
+android {
+    publishNonDefault true
+    defaultConfig {
+        consumerProguardFiles "proguard-rules.txt"
+    }
+}
+
+dependencies {
+    releaseCompile project(path: ':lib:common', configuration: 'release')
+    debugCompile project(path: ':lib:common', configuration: 'debug')
+    releaseCompile project(path: ':lib:ui', configuration: 'release')
+    debugCompile project(path: ':lib:ui', configuration: 'debug')
+
+    compile "com.google.firebase:firebase-database:${versions.firebase}"
+
+}

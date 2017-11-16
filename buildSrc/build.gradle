@@ -1,0 +1,6 @@
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile "org.jetbrains:annotations:15.0"
+}

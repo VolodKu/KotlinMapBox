@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lr_devtools_app_name">Live Roads DevTools</string>
+    <string name="lr_devtools_enabled_checkbox_label">DevTools Enabled</string>
+    <string name="lr_devtools_map_tilt_zoom_visible_checkbox_label">Map Tilt/Zoom Visible</string>
+    <string name="lr_devtools_pip_map_style_title">PIP Map Style</string>
+    <string name="lr_devtools_large_map_style_title">Large Map Style</string>
+    <string name="lr_devtools_location_source_title">Location Source</string>
+    <string name="lr_devtools_large_map_center_as_location_title">Use Large Map Center As Location</string>
+    <string name="lr_devtools_map_grid_lines_enabled_title">Map Grid Lines</string>
+    <string name="lr_devtools_map_source_blackbox">Black Box</string>
+    <string name="lr_devtools_map_source_gms">GMS</string>
+    <string name="lr_devtools_default_value">Default</string>
+    <string name="lr_devtools_day_theme">Day Theme</string>
+    <string name="lr_devtools_night_theme">Night Theme</string>
+    <string name="lr_devtools_day_theme_hd">Day Theme HD</string>
+    <string name="lr_devtools_night_theme_hd">Night Theme HD</string>
+    <string name="lr_devtools_visible">Visible</string>
+    <string name="lr_devtools_hidden">Hidden</string>
+    <string name="lr_devtools_enabled">Enabled</string>
+    <string name="lr_devtools_disabled">Disabled</string>
+    <string name="lr_devtools_reset_to_defaults">Reset to Defaults</string>
+</resources>

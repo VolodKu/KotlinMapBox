@@ -1,0 +1,12 @@
+apply plugin: "com.android.library"
+apply from: rootProject.file("common.gradle")
+
+android {
+    publishNonDefault true
+}
+
+dependencies {
+    compile(name: "blackbox-release", ext:"aar") {
+        transitive = true
+    }
+}
